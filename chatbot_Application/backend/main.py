@@ -6,7 +6,7 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.responses import HTMLResponse
 from pathlib import Path
 from nlp import preprocess_text
-from db import collection
+from database.db import collection
 from pymongo.errors import PyMongoError
 app = FastAPI()
 
