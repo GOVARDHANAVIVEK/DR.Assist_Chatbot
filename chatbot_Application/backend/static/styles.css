@@ -1,0 +1,267 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f9;
+}
+
+.chatbot {
+    position: relative;
+}
+
+.chat-button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    cursor: pointer;
+}
+
+.chat-button img {
+    width: 50px;
+    height: 50px;
+}
+
+.chat-window {
+    position: fixed;
+    bottom: 100px;
+    right: 30px;
+    width: 400px; /* Width of chat window */
+    height: 600px;
+    background-color: #ffffff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid #ddd;
+}
+
+.chat-window.hidden {
+    display: none;
+}
+
+.chat-header {
+    background-color: #007bff;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #0056b3;
+}
+
+.close-chat {
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.chat-body {
+    display: flex;
+    flex-direction:column;
+    align-items:flex-end;
+    height: calc(100% - 60px);
+    overflow-y: auto;
+    padding: 10px;
+    position: relative;
+  
+/* 
+    display: flex;
+    flex-direction: column;
+
+
+    height: 100%;
+    overflow-y: auto; 
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #f9f9f9; */
+}
+
+
+
+.message {
+    max-width: 90%;
+    padding: 12px 16px; /* Adjusted padding */
+    border-radius: 12px; /* Consistent border radius */
+    margin-bottom: 12px; /* Space between messages */
+}
+
+.user-message {
+    align-self: flex-end;
+}
+
+.user-message .message {
+    background-color: #007bff; /* Background color for user messages */
+    color: white; /* Text color for user messages */
+    font-size: 14px; /* Reduced font size */
+}
+
+.bot-message {
+    align-self: flex-start;
+}
+
+.bot-message .message {
+    background-color: #efece9; /* Background color for bot messages */
+    color: black; /* Text color for bot messages */
+    font-size: 14px; /* Reduced font size */
+}
+
+.avatar {
+    width: 40px; /* Slightly smaller avatar */
+    height: 40px; /* Slightly smaller avatar */
+    border-radius: 50%;
+    background-color: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px; /* Slightly smaller font size */
+    color: white;
+    margin: 0 8px; /* Adjusted margin */
+}
+
+.chat-footer {
+    display: flex;
+    padding: 15px;
+    border-top: 1px solid #ddd;
+    background-color: #f8f9fa;
+}
+
+.chat-footer input {
+    flex: 1;
+    padding: 10px; /* Reduced padding */
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    font-size: 14px; /* Reduced font size */
+}
+
+.chat-footer button {
+    padding: 10px 18px; /* Reduced padding */
+    background-color: #007bff;
+    border: none;
+    color: white;
+    border-radius: 25px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 14px; /* Reduced font size */
+}
+
+.chat-footer button:hover {
+    background-color: #0056b3;
+}
+
+
+/* form */
+.form-container {
+    position: absolute;
+    top: 0px;
+    bottom: 0;
+    width: 86%;
+    height: 90%;
+    background-color: #fff;
+
+    padding: 20px 20px;
+    border-top: 1px solid #ddd;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-container .bot-message {
+
+    background-color: white; /* Remove background color */
+
+}
+
+.form-container h3 {
+    margin-top: 0;
+    font-size: 18px;
+    font-family: Arial, sans-serif; /* Improve font style */
+    color: #06566a; /* Darker font color for better readability */
+}
+
+.form-container label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-family: Arial, sans-serif; /* Improve font style */
+    color: #333; /* Darker font color */
+}
+
+.form-container input {
+    width: 80%; /* Ensure input fields take up full width within the form */
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: Arial, sans-serif; /* Improve font style */
+}
+
+.form-container button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-family: Arial, sans-serif; /* Improve font style */
+}
+
+.form-container button:hover {
+    background-color: #0056b3;
+}
+.hidden {
+    display: none;
+}
+
+/* appointment card styles*/
+
+.appointment-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    font-family: Arial, sans-serif; /* Ensure a clean font */
+    width: 100%;
+    max-width: 380px; /* Set a maximum width for the card */
+}
+
+.appointment-card h2 {
+    text-align: center;
+    color: #007bff;
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.appointment-detail {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.appointment-detail:last-child {
+    border-bottom: none;
+}
+
+.appointment-detail strong {
+    color: #333;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.appointment-detail span {
+    color: #007bff;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+/* Optional: Hover effect for details */
+.appointment-detail:hover {
+    background-color: #f9f9f9;
+}

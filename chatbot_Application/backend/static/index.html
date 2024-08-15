@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="chatbot" id="chatbot">
+        <div id="chat-window" class="chat-window hidden">
+            <div class="chat-header">
+                <h4>DR.Assist</h4>
+                <span id="close-chat" class="close-chat">&times;</span>
+            </div>
+
+         <div class="chat-body" id="chat-body">
+
+            <div class="form-container hidden" id="form-container">
+                <form id="appointment-form">
+                    <label for="Doctor_name">Doctor Name:</label>
+                    <input type="text" id="Doctor_name" name="Doctor_name">
+                    
+                    <label for="Patient_name">Patient Name:</label>
+                    <input type="text" id="Patient_name" name="Patient_name">
+                    
+                    <label for="Appointment_type">Appointment Type:</label>
+                    <input type="text" id="Appointment_type" name="Appointment_type">
+                    
+                    <label for="Date_time">Date & Time:</label>
+                    <input type="datetime-local" id="Date_time" name="Date_time">
+                    
+                    <label for="Patient_mobile">Phone Number</label>
+                    <input type="phonenumber" id="Patient_mobile" name="Patient_mobile">
+
+                    <button type="button" id="submit-update">Update</button>
+                </form>
+            </div>
+            <div class="appointment-card hidden" id="appointment-card"></div>
+        </div>
+        
+            
+        <div class="chat-footer">
+            <input type="text" id="chat-input" placeholder="Ask something...">
+            <button id="send-button">Send</button>
+        </div>
+        </div>
+        <!-- Floating button -->
+        <div id="chat-button" class="chat-button">
+            <span>chat</span>
+        </div>
+    </div>
+    <script src="/static/index.js"></script>
+</body>
+</html>
