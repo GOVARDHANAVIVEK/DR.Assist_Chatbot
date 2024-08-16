@@ -225,24 +225,26 @@ body {
     margin-bottom: 20px;
     font-family: Arial, sans-serif; /* Ensure a clean font */
     width: 100%;
-    max-width: 380px; /* Set a maximum width for the card */
+    max-width: 350px; /* Set a maximum width for the card */
+    border: 1px solid #ddd; /* Add a subtle border */
 }
 
 .appointment-card h2 {
     text-align: center;
     color: #007bff;
-    font-size: 24px;
-    margin-bottom: 20px;
+    font-size: 16px; /* Slightly smaller font size */
+    margin-bottom: 15px; /* Reduce bottom margin */
     font-weight: bold;
-    border-bottom: 2px solid #ddd;
+    border-bottom: 1px solid #ddd; /* Thinner border */
     padding-bottom: 10px;
 }
 
 .appointment-detail {
     display: flex;
     justify-content: space-between;
-    padding: 10px 0;
+    padding: 8px 0; /* Reduce padding for a tighter layout */
     border-bottom: 1px solid #f0f0f0;
+    font-size: 12px; /* Slightly smaller font size for details */
 }
 
 .appointment-detail:last-child {
@@ -252,13 +254,11 @@ body {
 .appointment-detail strong {
     color: #333;
     font-weight: 600;
-    font-size: 16px;
 }
 
 .appointment-detail span {
     color: #007bff;
     font-weight: 600;
-    font-size: 16px;
 }
 
 /* Optional: Hover effect for details */

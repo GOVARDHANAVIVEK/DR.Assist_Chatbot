@@ -6,7 +6,7 @@ load_dotenv()
 mongo_uri = os.getenv("MONGO_URI")
 database_name = os.getenv("DATABASE_NAME")
 collection_name = os.getenv("COLLECTION_NAME")
-
+collection =""
 try:
 # Establish a connection to the MongoDB server
     client = MongoClient(mongo_uri,
@@ -19,7 +19,7 @@ try:
     collection = db[collection_name]
     print(f" connected to mongo client.....")
 except Exception as e:
-    print(f"error : {e._message}")    
+    print(f"error : {e}")    
 
 
 
